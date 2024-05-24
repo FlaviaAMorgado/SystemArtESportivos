@@ -15,6 +15,7 @@ namespace SystemArtEsportivos
         public Produto()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.None;
         }
 
         private void Produto_Load(object sender, EventArgs e)

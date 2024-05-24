@@ -15,9 +15,20 @@ namespace SystemArtEsportivos
         public Funcionario()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.None;
         }
 
         private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Funcionario_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click_1(object sender, EventArgs e)
         {
 
         }

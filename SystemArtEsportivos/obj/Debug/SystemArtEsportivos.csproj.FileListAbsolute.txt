@@ -1,6 +1,3 @@
-C:\Users\flavi\OneDrive - Etec Centro Paula Souza\Trabalhos2024\CIDADE\ArtEsportivos\SystemArtEsportivos\SystemArtEsportivos\bin\Debug\Form1.resx
-C:\Users\flavi\OneDrive - Etec Centro Paula Souza\Trabalhos2024\CIDADE\ArtEsportivos\SystemArtEsportivos\SystemArtEsportivos\bin\Debug\Form1.cs
-C:\Users\flavi\OneDrive - Etec Centro Paula Souza\Trabalhos2024\CIDADE\ArtEsportivos\SystemArtEsportivos\SystemArtEsportivos\bin\Debug\Form1.Designer.cs
 C:\Users\flavi\OneDrive - Etec Centro Paula Souza\Trabalhos2024\CIDADE\ArtEsportivos\SystemArtEsportivos\SystemArtEsportivos\bin\Debug\SystemArtEsportivos.exe.config
 C:\Users\flavi\OneDrive - Etec Centro Paula Souza\Trabalhos2024\CIDADE\ArtEsportivos\SystemArtEsportivos\SystemArtEsportivos\bin\Debug\SystemArtEsportivos.exe
 C:\Users\flavi\OneDrive - Etec Centro Paula Souza\Trabalhos2024\CIDADE\ArtEsportivos\SystemArtEsportivos\SystemArtEsportivos\bin\Debug\SystemArtEsportivos.pdb
@@ -13,3 +10,14 @@ C:\Users\flavi\OneDrive - Etec Centro Paula Souza\Trabalhos2024\CIDADE\ArtEsport
 C:\Users\flavi\OneDrive - Etec Centro Paula Souza\Trabalhos2024\CIDADE\ArtEsportivos\SystemArtEsportivos\SystemArtEsportivos\obj\Debug\SystemArtEsportivos.csproj.CoreCompileInputs.cache
 C:\Users\flavi\OneDrive - Etec Centro Paula Souza\Trabalhos2024\CIDADE\ArtEsportivos\SystemArtEsportivos\SystemArtEsportivos\obj\Debug\SystemArtEsportivos.exe
 C:\Users\flavi\OneDrive - Etec Centro Paula Souza\Trabalhos2024\CIDADE\ArtEsportivos\SystemArtEsportivos\SystemArtEsportivos\obj\Debug\SystemArtEsportivos.pdb
+C:\Users\flavi\OneDrive - Etec Centro Paula Souza\Trabalhos2024\CIDADE\ArtEsportivos\SystemArtEsportivos\SystemArtEsportivos\bin\Debug\Login.resx
+C:\Users\flavi\OneDrive - Etec Centro Paula Souza\Trabalhos2024\CIDADE\ArtEsportivos\SystemArtEsportivos\SystemArtEsportivos\bin\Debug\Login.cs
+C:\Users\flavi\OneDrive - Etec Centro Paula Souza\Trabalhos2024\CIDADE\ArtEsportivos\SystemArtEsportivos\SystemArtEsportivos\bin\Debug\Login.Designer.cs
+C:\Users\flavi\OneDrive - Etec Centro Paula Souza\Trabalhos2024\CIDADE\ArtEsportivos\SystemArtEsportivos\SystemArtEsportivos\obj\Debug\SystemArtEsportivos.Cliente.resources
+C:\Users\flavi\OneDrive - Etec Centro Paula Souza\Trabalhos2024\CIDADE\ArtEsportivos\SystemArtEsportivos\SystemArtEsportivos\obj\Debug\SystemArtEsportivos.Funcionario.resources
+C:\Users\flavi\OneDrive - Etec Centro Paula Souza\Trabalhos2024\CIDADE\ArtEsportivos\SystemArtEsportivos\SystemArtEsportivos\obj\Debug\SystemArtEsportivos.Pedido.resources
+C:\Users\flavi\OneDrive - Etec Centro Paula Souza\Trabalhos2024\CIDADE\ArtEsportivos\SystemArtEsportivos\SystemArtEsportivos\obj\Debug\SystemArtEsportivos.Produto.resources
+C:\Users\flavi\OneDrive - Etec Centro Paula Souza\Trabalhos2024\CIDADE\ArtEsportivos\SystemArtEsportivos\SystemArtEsportivos\obj\Debug\SystemArtEsportivos.Menu.resources
+C:\Users\flavi\OneDrive - Etec Centro Paula Souza\Trabalhos2024\CIDADE\ArtEsportivos\SystemArtEsportivos\SystemArtEsportivos\bin\Debug\MySql.Data.dll
+C:\Users\flavi\OneDrive - Etec Centro Paula Souza\Trabalhos2024\CIDADE\ArtEsportivos\SystemArtEsportivos\SystemArtEsportivos\bin\Debug\MySQLConnection.dll
+C:\Users\flavi\OneDrive - Etec Centro Paula Souza\Trabalhos2024\CIDADE\ArtEsportivos\SystemArtEsportivos\SystemArtEsportivos\obj\Debug\SystemArtEsportivos.csproj.CopyComplete
