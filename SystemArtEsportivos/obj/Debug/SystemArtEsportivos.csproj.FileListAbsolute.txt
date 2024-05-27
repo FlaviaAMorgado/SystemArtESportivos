@@ -21,3 +21,25 @@ C:\Users\flavi\OneDrive - Etec Centro Paula Souza\Trabalhos2024\CIDADE\ArtEsport
 C:\Users\flavi\OneDrive - Etec Centro Paula Souza\Trabalhos2024\CIDADE\ArtEsportivos\SystemArtEsportivos\SystemArtEsportivos\bin\Debug\MySql.Data.dll
 C:\Users\flavi\OneDrive - Etec Centro Paula Souza\Trabalhos2024\CIDADE\ArtEsportivos\SystemArtEsportivos\SystemArtEsportivos\bin\Debug\MySQLConnection.dll
 C:\Users\flavi\OneDrive - Etec Centro Paula Souza\Trabalhos2024\CIDADE\ArtEsportivos\SystemArtEsportivos\SystemArtEsportivos\obj\Debug\SystemArtEsportivos.csproj.CopyComplete
+C:\Users\barro\OneDrive\Área de Trabalho\Projeto Cidade\SystemArtEsportivos\bin\Debug\Login.resx
+C:\Users\barro\OneDrive\Área de Trabalho\Projeto Cidade\SystemArtEsportivos\bin\Debug\Login.cs
+C:\Users\barro\OneDrive\Área de Trabalho\Projeto Cidade\SystemArtEsportivos\bin\Debug\Login.Designer.cs
+C:\Users\barro\OneDrive\Área de Trabalho\Projeto Cidade\SystemArtEsportivos\bin\Debug\SystemArtEsportivos.exe.config
+C:\Users\barro\OneDrive\Área de Trabalho\Projeto Cidade\SystemArtEsportivos\bin\Debug\SystemArtEsportivos.exe
+C:\Users\barro\OneDrive\Área de Trabalho\Projeto Cidade\SystemArtEsportivos\bin\Debug\SystemArtEsportivos.pdb
+C:\Users\barro\OneDrive\Área de Trabalho\Projeto Cidade\SystemArtEsportivos\bin\Debug\MySql.Data.dll
+C:\Users\barro\OneDrive\Área de Trabalho\Projeto Cidade\SystemArtEsportivos\bin\Debug\MySQLConnection.dll
+C:\Users\barro\OneDrive\Área de Trabalho\Projeto Cidade\SystemArtEsportivos\obj\Debug\SystemArtEsportivos.csproj.AssemblyReference.cache
+C:\Users\barro\OneDrive\Área de Trabalho\Projeto Cidade\SystemArtEsportivos\obj\Debug\SystemArtEsportivos.Cliente.resources
+C:\Users\barro\OneDrive\Área de Trabalho\Projeto Cidade\SystemArtEsportivos\obj\Debug\SystemArtEsportivos.Funcionario.resources
+C:\Users\barro\OneDrive\Área de Trabalho\Projeto Cidade\SystemArtEsportivos\obj\Debug\SystemArtEsportivos.Form1.resources
+C:\Users\barro\OneDrive\Área de Trabalho\Projeto Cidade\SystemArtEsportivos\obj\Debug\SystemArtEsportivos.Pedido.resources
+C:\Users\barro\OneDrive\Área de Trabalho\Projeto Cidade\SystemArtEsportivos\obj\Debug\SystemArtEsportivos.Produto.resources
+C:\Users\barro\OneDrive\Área de Trabalho\Projeto Cidade\SystemArtEsportivos\obj\Debug\SystemArtEsportivos.Splash.resources
+C:\Users\barro\OneDrive\Área de Trabalho\Projeto Cidade\SystemArtEsportivos\obj\Debug\SystemArtEsportivos.Menu.resources
+C:\Users\barro\OneDrive\Área de Trabalho\Projeto Cidade\SystemArtEsportivos\obj\Debug\SystemArtEsportivos.Properties.Resources.resources
+C:\Users\barro\OneDrive\Área de Trabalho\Projeto Cidade\SystemArtEsportivos\obj\Debug\SystemArtEsportivos.csproj.GenerateResource.cache
+C:\Users\barro\OneDrive\Área de Trabalho\Projeto Cidade\SystemArtEsportivos\obj\Debug\SystemArtEsportivos.csproj.CoreCompileInputs.cache
+C:\Users\barro\OneDrive\Área de Trabalho\Projeto Cidade\SystemArtEsportivos\obj\Debug\SystemAr.9B13B4F4.Up2Date
+C:\Users\barro\OneDrive\Área de Trabalho\Projeto Cidade\SystemArtEsportivos\obj\Debug\SystemArtEsportivos.exe
+C:\Users\barro\OneDrive\Área de Trabalho\Projeto Cidade\SystemArtEsportivos\obj\Debug\SystemArtEsportivos.pdb

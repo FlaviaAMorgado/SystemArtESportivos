@@ -19,8 +19,8 @@ namespace SystemArtEsportivos
 
         }
 
-        private void AbrirNovaJanela(object abrirnovajanela)
-        {
+        public void AbrirNovaJanela(object abrirnovajanela)
+        {       
             if (this.pnConteudo.Controls.Count > 0)
                 this.pnConteudo.Controls.RemoveAt(0);
             Form tela = abrirnovajanela as Form;
@@ -29,7 +29,6 @@ namespace SystemArtEsportivos
             this.pnConteudo.Controls.Add(tela);
             this.pnConteudo.Tag = tela;
             tela.Show();
-
         }
 
         private void button1_Click(object sender, EventArgs e)

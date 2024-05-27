@@ -13,6 +13,7 @@ namespace SystemArtEsportivos
 {
     public partial class Pedido : Form
     {
+
         //instanciando o BD 
         Conexao con = new Conexao();
         MySqlCommand cmd = new MySqlCommand();
@@ -26,52 +27,34 @@ namespace SystemArtEsportivos
         private void habilitaCampos()
         {
             txtCPFCli.Enabled = true;
-            txtCodFunc.Enabled = true;
             txtCodProd.Enabled = true;
             txtQtd.Enabled = true;
-            txtValorUni.Enabled = true;
-            txtValorTotal.Enabled = true;
 
             btnNovo.Enabled = false;
-            btnSalvar.Enabled = true;
-            btnAlterar.Enabled = false;
             txtCPFCli.Focus();
-        }
-
-
-        // MÉTODO desabilitar campos
-        private void desabiltaCampos()
-        {
-            txtCPFCli.Enabled = true;
-            txtCodFunc.Enabled = true;
-            txtCodProd.Enabled = true;
-            btnNovo.Enabled = true;
-            txtQtd.Enabled = true;
-            txtValorUni.Enabled = true;
-            txtValorTotal.Enabled = true;
-
-
-            btnSalvar.Enabled = false;
-            btnAlterar.Enabled = false;
-            txtPesquisar.Clear(); //limpa campo
-            txtPesquisar.Focus();
-            limpaCampos(); //chamando método
         }
 
         //MÉTODO limpa campos
         private void limpaCampos()
         {
-            txtCPFCli.Clear();
-            txtCodFunc.Clear();
             txtCodProd.Clear();
             txtQtd.Clear();
-            txtValorUni.Clear();
-            txtValorTotal.Clear();
-
-            txtPesquisar.Clear();
-            dgvPedidos.DataSource = null; //limpa o quadro de pesquisa
         }
 
+        private void AbrirCliente(Form abrirnovajanela, Panel panel)
+        {
+            foreach (Control control in panel.Controls)
+            {
+                control.Visible = false;
+            }
+
+            // Adiciona a nova janela ao painel
+            abrirnovajanela.TopLevel = false;
+            abrirnovajanela.Dock = DockStyle.Fill;
+            panel.Controls.Add(abrirnovajanela);
+            panel.Tag = abrirnovajanela;
+            abrirnovajanela.Show();
+        }
 
         private void Pedido_Load(object sender, EventArgs e)
         {
@@ -81,11 +64,27 @@ namespace SystemArtEsportivos
         private void txtCPFCli_TextChanged(object sender, EventArgs e)
         {
 
-        }
+            if (txtCPFCli.Text.Length == 11)
+            {
+                string sql = "Call spSelect_CPF(@CPF);";
+                MySqlCommand cmd = new MySqlCommand(sql, con.ConnectarBD());
+                cmd.Parameters.Add("@CPF", MySqlDbType.Decimal).Value = decimal.Parse(txtCPFCli.Text);
 
-        private void lblValorUni_Click(object sender, EventArgs e)
-        {
+                object resultado = cmd.ExecuteScalar();
 
+
+                if (resultado != null)
+                {
+                    string msg = resultado.ToString();
+                    DialogResult result = MessageBox.Show("Cliente não cadastrado. Deseja cadastrar?", "Cadastro de Cliente", MessageBoxButtons.YesNo);
+                    if (result == DialogResult.Yes)
+                        AbrirCliente(new Cliente(), this.pnCadastros);
+                }
+            }
+            else if((txtCPFCli.Text.Length > 11))
+            {
+                MessageBox.Show("Digite um código com somente 14 digitos");
+            }
         }
 
         private void lblCPFcli_Click(object sender, EventArgs e)
@@ -95,63 +94,92 @@ namespace SystemArtEsportivos
 
         private void btnNovo_Click(object sender, EventArgs e)
         {
-            //chamando método 
+            //chamando 
+            dgvPedidos.DataSource = null; //limpa o 
+            txtCPFCli.Clear();
+            limpaCampos();
             habilitaCampos();
+            lblTotal.Text = "Total: R$ 0";
         }
 
         //BOTÃO SALVAR
         private void btnSalvar_Click(object sender, EventArgs e)
         {
+            
+
+        }
+       
+
+        private void dgvPedidos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+
+        private void btnAdicionar_Click(object sender, EventArgs e)
+        {
             //VERIFICA OS CAMPOS SE ESTÃO VAZIOS
             if (txtCPFCli.Text == "")
             {
-                MessageBox.Show("Obrigatório Preencher o campo nome");
+                MessageBox.Show("Preencha o código do funcionário");
                 txtCPFCli.Focus();
             }
             else if (txtCodFunc.Text == "")
             {
-                MessageBox.Show("Obrigatório Preencher o campo Email");
+                MessageBox.Show("Preencha o CPF do cliente");
                 txtCodFunc.Focus();
             }
 
             else if (txtCodProd.Text == "")
             {
-                MessageBox.Show("Obrigatório Preencher o campo Telefone");
+                MessageBox.Show("Digite o código do produto");
                 txtCodProd.Focus();
             }
             else if (txtQtd.Text == "")
             {
-                MessageBox.Show("Obrigatório Preencher o campo Telefone");
+                MessageBox.Show("Digite a quantidade do produto");
                 txtQtd.Focus();
-            }
-            else if (txtValorUni.Text == "")
-            {
-                MessageBox.Show("Obrigatório Preencher o campo Telefone");
-                txtValorUni.Focus();
-            }
-            else if (txtValorTotal.Text == "")
-            {
-                MessageBox.Show("Obrigatório Preencher o campo Telefone");
-                txtValorTotal.Focus();
             }
             else
             {//tratamento de erro 
                 try
                 {
-                    //VARIAVEI SQL QUE RECEBE O INSERT(VAI INSERIR OS DADOS NO BANCO com imagem)
-                    string sql = "insert into tbcliente(nome,email, telefone) values(@nome,@email,@telefone)";
-                    MySqlCommand cmd = new MySqlCommand(sql, con.ConnectarBD()); //Identifica comandos mySql no c#
-                    cmd.Parameters.Add("@CPF", MySqlDbType.VarChar).Value = txtCPFCli.Text; //CPF do cliente
-                    cmd.Parameters.Add("@codFunc", MySqlDbType.VarChar).Value = txtCodFunc.Text; // Cod do funcionário
-                    cmd.Parameters.Add("@codBarras", MySqlDbType.VarChar).Value = txtCodProd.Text;//Cod Prod
-                    cmd.Parameters.Add("@qtd", MySqlDbType.VarChar).Value = txtQtd.Text;// qtd
-                    cmd.Parameters.Add("@preco", MySqlDbType.VarChar).Value = txtValorUni.Text;// valorUni
-                    cmd.Parameters.Add("@totalPedido", MySqlDbType.VarChar).Value = txtValorTotal.Text;// Valor Total
+                    int vCod = int.Parse(txtCodFunc.Text);
+                    decimal vCPFCli = decimal.Parse(txtCPFCli.Text);
 
+                    //VARIAVEI SQL QUE RECEBE O INSERT(VAI INSERIR OS DADOS NO BANCO com imagem)
+                    string sql = "Call spInsert_tbItemPedido(@codFunc, @CPF, @codBarras, @qtd);";
+
+                    MySqlCommand cmd = new MySqlCommand(sql, con.ConnectarBD()); //Identifica comandos mySql no c#
+                    cmd.Parameters.Add("@codFunc", MySqlDbType.Int32).Value = vCod; // Cod do funcionário
+                    cmd.Parameters.Add("@CPF", MySqlDbType.Decimal).Value = vCPFCli; //CPF do cliente 
+                    cmd.Parameters.Add("@codBarras", MySqlDbType.Decimal).Value = decimal.Parse(txtCodProd.Text);//Cod Prod
+                    cmd.Parameters.Add("@qtd", MySqlDbType.Int32).Value = int.Parse(txtQtd.Text);// qtd
 
                     cmd.ExecuteNonQuery();//inserindo
-                    MessageBox.Show("Dados Cadastrados com Sucesso"); //msg de sucesso
+                    
+
+                    sql = "Call Select_total_tbPedido(@CPF)";
+                    cmd = new MySqlCommand(sql, con.ConnectarBD());
+                    cmd.Parameters.Add("@CPF", MySqlDbType.Decimal).Value = vCPFCli;
+
+                    lblTotal.Text = "Total: R$ " + cmd.ExecuteScalar().ToString();
+
                     limpaCampos();
+
+                    txtCodFunc.Enabled = false;
+                    txtCPFCli.Enabled = false;
+
+                    sql = "Call spSelect_tbItemPedido(@CPF);";
+                    cmd = new MySqlCommand(sql, con.ConnectarBD());
+                    cmd.Parameters.Add("@CPF", MySqlDbType.Decimal).Value = vCPFCli;
+
+                    MySqlDataAdapter da = new MySqlDataAdapter();
+                    DataTable dt = new DataTable();
+                    da.SelectCommand = cmd;
+                    da.Fill(dt);
+
+                    dgvPedidos.DataSource = dt;
 
                     con.DesConnectarBD();//DESCONECTA DO BANCO DE DADOS
                 }
@@ -160,38 +188,36 @@ namespace SystemArtEsportivos
                     MessageBox.Show(erro.Message);
                 }
             }
-
         }
 
-        private void dgvPedidos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void lblCodProd_Click(object sender, EventArgs e)
         {
-            carregarPedidos();
+
         }
 
-        private void carregarPedidos()
-        {/*
-            try
+        private void lblQtd_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCodProd_TextChanged(object sender, EventArgs e)
+        {
+            if (txtCodProd.Text.Length == 14)
             {
-                
-                //começa a con com bd
-                con.ConnectarBD();
-                txtCodCli.Text = dgvCliente.SelectedRows[0].Cells[0].Value.ToString();  //PEGA O VALOR DO PRIMEIRO CAMPO DA TABELA(CODIGO POR EXEMPLO CASO TENHA)
-                txtNome.Text = dgvCliente.SelectedRows[0].Cells[1].Value.ToString();//PEGA O O NOME E PASSAR NO DATAGRID
-                txtEmail.Text = dgvCliente.SelectedRows[0].Cells[2].Value.ToString();//PEGA O EMAIL E PASSAR NO DATAGRID
-                txtTelefone.Text = dgvCliente.SelectedRows[0].Cells[3].Value.ToString();// PEGA O TELEFONE E PASSAR NO DATAGRID
-                //DESCONECTA O BANCO DE DADOS
-                con.DesConnectarBD();
+                string sql = "Call spSelect_CodBarras(@codBarras);";
+                MySqlCommand cmd = new MySqlCommand(sql, con.ConnectarBD());
+                cmd.Parameters.Add("@codBarras", MySqlDbType.Decimal).Value = decimal.Parse(txtCodProd.Text);
 
+                object resultado = cmd.ExecuteScalar();
+
+
+                if (resultado != null)
+                {
+                    string msg = resultado.ToString();
+                    MessageBox.Show(msg);
+
+                }
             }
-            //EM CASO DÊ ALGO ERRADO  
-            catch (Exception erro)
-            {
-                //MOSTRA A MENSAGEM DE ERRO
-                MessageBox.Show(erro.Message);
-
-            }
-                */
-
         }
     }
   }

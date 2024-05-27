@@ -29,17 +29,10 @@
         private void InitializeComponent()
         {
             this.pnCadastros = new System.Windows.Forms.Panel();
-            this.btnCalcular = new System.Windows.Forms.Button();
+            this.btnAdicionar = new System.Windows.Forms.Button();
             this.dgvPedidos = new System.Windows.Forms.DataGridView();
-            this.txtPesquisar = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnAlterar = new System.Windows.Forms.Button();
-            this.btnSalvar = new System.Windows.Forms.Button();
             this.btnNovo = new System.Windows.Forms.Button();
-            this.txtValorTotal = new System.Windows.Forms.TextBox();
             this.lblTotal = new System.Windows.Forms.Label();
-            this.txtValorUni = new System.Windows.Forms.TextBox();
-            this.lblValorUni = new System.Windows.Forms.Label();
             this.txtQtd = new System.Windows.Forms.TextBox();
             this.lblQtd = new System.Windows.Forms.Label();
             this.txtCodProd = new System.Windows.Forms.TextBox();
@@ -55,17 +48,10 @@
             // 
             // pnCadastros
             // 
-            this.pnCadastros.Controls.Add(this.btnCalcular);
+            this.pnCadastros.Controls.Add(this.btnAdicionar);
             this.pnCadastros.Controls.Add(this.dgvPedidos);
-            this.pnCadastros.Controls.Add(this.txtPesquisar);
-            this.pnCadastros.Controls.Add(this.label1);
-            this.pnCadastros.Controls.Add(this.btnAlterar);
-            this.pnCadastros.Controls.Add(this.btnSalvar);
             this.pnCadastros.Controls.Add(this.btnNovo);
-            this.pnCadastros.Controls.Add(this.txtValorTotal);
             this.pnCadastros.Controls.Add(this.lblTotal);
-            this.pnCadastros.Controls.Add(this.txtValorUni);
-            this.pnCadastros.Controls.Add(this.lblValorUni);
             this.pnCadastros.Controls.Add(this.txtQtd);
             this.pnCadastros.Controls.Add(this.lblQtd);
             this.pnCadastros.Controls.Add(this.txtCodProd);
@@ -81,63 +67,28 @@
             this.pnCadastros.Size = new System.Drawing.Size(659, 344);
             this.pnCadastros.TabIndex = 53;
             // 
-            // btnCalcular
+            // btnAdicionar
             // 
-            this.btnCalcular.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCalcular.Location = new System.Drawing.Point(205, 225);
-            this.btnCalcular.Name = "btnCalcular";
-            this.btnCalcular.Size = new System.Drawing.Size(78, 23);
-            this.btnCalcular.TabIndex = 76;
-            this.btnCalcular.Text = "CALCULAR";
-            this.btnCalcular.UseVisualStyleBackColor = true;
+            this.btnAdicionar.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdicionar.Location = new System.Drawing.Point(34, 193);
+            this.btnAdicionar.Name = "btnAdicionar";
+            this.btnAdicionar.Size = new System.Drawing.Size(78, 23);
+            this.btnAdicionar.TabIndex = 76;
+            this.btnAdicionar.Text = "Adicionar";
+            this.btnAdicionar.UseVisualStyleBackColor = true;
+            this.btnAdicionar.Click += new System.EventHandler(this.btnAdicionar_Click);
             // 
             // dgvPedidos
             // 
+            this.dgvPedidos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dgvPedidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPedidos.Location = new System.Drawing.Point(299, 101);
+            this.dgvPedidos.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.dgvPedidos.Location = new System.Drawing.Point(248, 62);
             this.dgvPedidos.Name = "dgvPedidos";
-            this.dgvPedidos.Size = new System.Drawing.Size(211, 99);
+            this.dgvPedidos.ReadOnly = true;
+            this.dgvPedidos.Size = new System.Drawing.Size(269, 177);
             this.dgvPedidos.TabIndex = 75;
             this.dgvPedidos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPedidos_CellContentClick);
-            // 
-            // txtPesquisar
-            // 
-            this.txtPesquisar.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPesquisar.Location = new System.Drawing.Point(379, 67);
-            this.txtPesquisar.Name = "txtPesquisar";
-            this.txtPesquisar.Size = new System.Drawing.Size(131, 21);
-            this.txtPesquisar.TabIndex = 74;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(313, 65);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 22);
-            this.label1.TabIndex = 73;
-            this.label1.Text = "Pesquisar:";
-            // 
-            // btnAlterar
-            // 
-            this.btnAlterar.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAlterar.Location = new System.Drawing.Point(220, 291);
-            this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(103, 31);
-            this.btnAlterar.TabIndex = 71;
-            this.btnAlterar.Text = "ALTERAR";
-            this.btnAlterar.UseVisualStyleBackColor = true;
-            // 
-            // btnSalvar
-            // 
-            this.btnSalvar.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvar.Location = new System.Drawing.Point(379, 291);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(94, 31);
-            this.btnSalvar.TabIndex = 70;
-            this.btnSalvar.Text = "SALVAR";
-            this.btnSalvar.UseVisualStyleBackColor = true;
-            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnNovo
             // 
@@ -150,92 +101,69 @@
             this.btnNovo.UseVisualStyleBackColor = true;
             this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
-            // txtValorTotal
-            // 
-            this.txtValorTotal.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtValorTotal.Location = new System.Drawing.Point(87, 228);
-            this.txtValorTotal.Name = "txtValorTotal";
-            this.txtValorTotal.Size = new System.Drawing.Size(114, 21);
-            this.txtValorTotal.TabIndex = 65;
-            // 
             // lblTotal
             // 
-            this.lblTotal.AutoSize = true;
-            this.lblTotal.Font = new System.Drawing.Font("Microsoft Tai Le", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(37, 230);
+            this.lblTotal.Font = new System.Drawing.Font("Microsoft Tai Le", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.Location = new System.Drawing.Point(379, 257);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(64, 22);
+            this.lblTotal.Size = new System.Drawing.Size(138, 22);
             this.lblTotal.TabIndex = 64;
-            this.lblTotal.Text = "TOTAL:";
-            // 
-            // txtValorUni
-            // 
-            this.txtValorUni.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtValorUni.Location = new System.Drawing.Point(103, 165);
-            this.txtValorUni.Name = "txtValorUni";
-            this.txtValorUni.Size = new System.Drawing.Size(109, 21);
-            this.txtValorUni.TabIndex = 63;
-            // 
-            // lblValorUni
-            // 
-            this.lblValorUni.AutoSize = true;
-            this.lblValorUni.Font = new System.Drawing.Font("Microsoft Tai Le", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblValorUni.Location = new System.Drawing.Point(26, 168);
-            this.lblValorUni.Name = "lblValorUni";
-            this.lblValorUni.Size = new System.Drawing.Size(120, 22);
-            this.lblValorUni.TabIndex = 62;
-            this.lblValorUni.Text = "Valor Unitário:";
-            this.lblValorUni.Click += new System.EventHandler(this.lblValorUni_Click);
+            this.lblTotal.Text = "Total: R$ 0";
+            this.lblTotal.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // txtQtd
             // 
-            this.txtQtd.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQtd.Location = new System.Drawing.Point(103, 138);
+            this.txtQtd.Font = new System.Drawing.Font("Microsoft Tai Le", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQtd.Location = new System.Drawing.Point(103, 149);
             this.txtQtd.Name = "txtQtd";
-            this.txtQtd.Size = new System.Drawing.Size(112, 21);
+            this.txtQtd.Size = new System.Drawing.Size(25, 29);
             this.txtQtd.TabIndex = 61;
             // 
             // lblQtd
             // 
             this.lblQtd.AutoSize = true;
             this.lblQtd.Font = new System.Drawing.Font("Microsoft Tai Le", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQtd.Location = new System.Drawing.Point(26, 138);
+            this.lblQtd.Location = new System.Drawing.Point(30, 152);
             this.lblQtd.Name = "lblQtd";
             this.lblQtd.Size = new System.Drawing.Size(104, 22);
             this.lblQtd.TabIndex = 60;
-            this.lblQtd.Text = "Qunatidade:";
+            this.lblQtd.Text = "Quantidade:";
+            this.lblQtd.Click += new System.EventHandler(this.lblQtd_Click);
             // 
             // txtCodProd
             // 
-            this.txtCodProd.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodProd.Location = new System.Drawing.Point(137, 116);
+            this.txtCodProd.Font = new System.Drawing.Font("Microsoft Tai Le", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodProd.Location = new System.Drawing.Point(137, 118);
+            this.txtCodProd.MaxLength = 14;
             this.txtCodProd.Name = "txtCodProd";
-            this.txtCodProd.Size = new System.Drawing.Size(148, 21);
+            this.txtCodProd.Size = new System.Drawing.Size(105, 29);
             this.txtCodProd.TabIndex = 59;
+            this.txtCodProd.TextChanged += new System.EventHandler(this.txtCodProd_TextChanged);
             // 
             // lblCodProd
             // 
             this.lblCodProd.AutoSize = true;
             this.lblCodProd.Font = new System.Drawing.Font("Microsoft Tai Le", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodProd.Location = new System.Drawing.Point(26, 116);
+            this.lblCodProd.Location = new System.Drawing.Point(30, 121);
             this.lblCodProd.Name = "lblCodProd";
             this.lblCodProd.Size = new System.Drawing.Size(161, 22);
             this.lblCodProd.TabIndex = 58;
             this.lblCodProd.Text = "Código do Produto:";
+            this.lblCodProd.Click += new System.EventHandler(this.lblCodProd_Click);
             // 
             // txtCodFunc
             // 
-            this.txtCodFunc.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodFunc.Location = new System.Drawing.Point(137, 90);
+            this.txtCodFunc.Font = new System.Drawing.Font("Microsoft Tai Le", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodFunc.Location = new System.Drawing.Point(144, 62);
             this.txtCodFunc.Name = "txtCodFunc";
-            this.txtCodFunc.Size = new System.Drawing.Size(148, 21);
+            this.txtCodFunc.Size = new System.Drawing.Size(40, 29);
             this.txtCodFunc.TabIndex = 57;
             // 
             // lblCodFunc
             // 
             this.lblCodFunc.AutoSize = true;
             this.lblCodFunc.Font = new System.Drawing.Font("Microsoft Tai Le", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodFunc.Location = new System.Drawing.Point(26, 92);
+            this.lblCodFunc.Location = new System.Drawing.Point(30, 64);
             this.lblCodFunc.Name = "lblCodFunc";
             this.lblCodFunc.Size = new System.Drawing.Size(163, 22);
             this.lblCodFunc.TabIndex = 56;
@@ -243,20 +171,20 @@
             // 
             // txtCPFCli
             // 
-            this.txtCPFCli.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCPFCli.Location = new System.Drawing.Point(113, 65);
+            this.txtCPFCli.Font = new System.Drawing.Font("Microsoft Tai Le", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCPFCli.Location = new System.Drawing.Point(117, 89);
+            this.txtCPFCli.MaxLength = 11;
             this.txtCPFCli.Name = "txtCPFCli";
-            this.txtCPFCli.Size = new System.Drawing.Size(166, 21);
+            this.txtCPFCli.Size = new System.Drawing.Size(125, 29);
             this.txtCPFCli.TabIndex = 55;
             this.txtCPFCli.TextChanged += new System.EventHandler(this.txtCPFCli_TextChanged);
             // 
             // lblCPFcli
             // 
-            this.lblCPFcli.AutoSize = true;
             this.lblCPFcli.Font = new System.Drawing.Font("Microsoft Tai Le", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCPFcli.Location = new System.Drawing.Point(26, 65);
+            this.lblCPFcli.Location = new System.Drawing.Point(30, 94);
             this.lblCPFcli.Name = "lblCPFcli";
-            this.lblCPFcli.Size = new System.Drawing.Size(126, 22);
+            this.lblCPFcli.Size = new System.Drawing.Size(131, 22);
             this.lblCPFcli.TabIndex = 54;
             this.lblCPFcli.Text = "CPF do Cliente:";
             this.lblCPFcli.Click += new System.EventHandler(this.lblCPFcli_Click);
@@ -290,10 +218,7 @@
         #endregion
 
         private System.Windows.Forms.Panel pnCadastros;
-        private System.Windows.Forms.TextBox txtValorTotal;
         private System.Windows.Forms.Label lblTotal;
-        private System.Windows.Forms.TextBox txtValorUni;
-        private System.Windows.Forms.Label lblValorUni;
         private System.Windows.Forms.TextBox txtQtd;
         private System.Windows.Forms.Label lblQtd;
         private System.Windows.Forms.TextBox txtCodProd;
@@ -303,12 +228,8 @@
         private System.Windows.Forms.TextBox txtCPFCli;
         private System.Windows.Forms.Label lblCPFcli;
         private System.Windows.Forms.Label lbltitolofuncionario;
-        private System.Windows.Forms.Button btnAlterar;
-        private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnNovo;
         private System.Windows.Forms.DataGridView dgvPedidos;
-        private System.Windows.Forms.TextBox txtPesquisar;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnCalcular;
+        private System.Windows.Forms.Button btnAdicionar;
     }
 }
