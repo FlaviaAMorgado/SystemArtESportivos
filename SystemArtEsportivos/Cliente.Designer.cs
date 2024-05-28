@@ -57,6 +57,7 @@
             this.btnALterar = new System.Windows.Forms.Button();
             this.btnEcluir = new System.Windows.Forms.Button();
             this.pnCadastros = new System.Windows.Forms.Panel();
+            this.txtCodCli = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).BeginInit();
             this.pnCadastros.SuspendLayout();
             this.SuspendLayout();
@@ -270,6 +271,7 @@
             this.txtPesquisar.Name = "txtPesquisar";
             this.txtPesquisar.Size = new System.Drawing.Size(171, 21);
             this.txtPesquisar.TabIndex = 58;
+            this.txtPesquisar.TextChanged += new System.EventHandler(this.txtPesquisar_TextChanged);
             // 
             // dgvCliente
             // 
@@ -300,6 +302,7 @@
             this.btnSalvar.TabIndex = 61;
             this.btnSalvar.Text = "SALVAR";
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnALterar
             // 
@@ -310,6 +313,7 @@
             this.btnALterar.TabIndex = 62;
             this.btnALterar.Text = "ALTERAR";
             this.btnALterar.UseVisualStyleBackColor = true;
+            this.btnALterar.Click += new System.EventHandler(this.btnALterar_Click);
             // 
             // btnEcluir
             // 
@@ -320,9 +324,11 @@
             this.btnEcluir.TabIndex = 63;
             this.btnEcluir.Text = "EXCLUIR";
             this.btnEcluir.UseVisualStyleBackColor = true;
+            this.btnEcluir.Click += new System.EventHandler(this.btnEcluir_Click);
             // 
             // pnCadastros
             // 
+            this.pnCadastros.Controls.Add(this.txtCodCli);
             this.pnCadastros.Controls.Add(this.btnEcluir);
             this.pnCadastros.Controls.Add(this.btnALterar);
             this.pnCadastros.Controls.Add(this.btnSalvar);
@@ -356,6 +362,16 @@
             this.pnCadastros.Name = "pnCadastros";
             this.pnCadastros.Size = new System.Drawing.Size(659, 344);
             this.pnCadastros.TabIndex = 36;
+            // 
+            // txtCodCli
+            // 
+            this.txtCodCli.BackColor = System.Drawing.SystemColors.Control;
+            this.txtCodCli.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCodCli.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodCli.Location = new System.Drawing.Point(19, 50);
+            this.txtCodCli.Name = "txtCodCli";
+            this.txtCodCli.Size = new System.Drawing.Size(10, 14);
+            this.txtCodCli.TabIndex = 64;
             // 
             // Cliente
             // 
@@ -407,5 +423,6 @@
         private System.Windows.Forms.Button btnALterar;
         private System.Windows.Forms.Button btnEcluir;
         private System.Windows.Forms.Panel pnCadastros;
+        private System.Windows.Forms.TextBox txtCodCli;
     }
 }

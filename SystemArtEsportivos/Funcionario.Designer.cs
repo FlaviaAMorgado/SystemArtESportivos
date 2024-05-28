@@ -30,37 +30,39 @@
         {
             this.pnCadastros = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnAlterar = new System.Windows.Forms.Button();
+            this.btnSalvar = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.dgvFuncionario = new System.Windows.Forms.DataGridView();
+            this.txtPesquisar = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtSenha = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.txtCodFunc = new System.Windows.Forms.TextBox();
             this.pnCadastros.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFuncionario)).BeginInit();
             this.SuspendLayout();
             // 
             // pnCadastros
             // 
+            this.pnCadastros.Controls.Add(this.txtCodFunc);
             this.pnCadastros.Controls.Add(this.button1);
-            this.pnCadastros.Controls.Add(this.button2);
-            this.pnCadastros.Controls.Add(this.button3);
+            this.pnCadastros.Controls.Add(this.btnAlterar);
+            this.pnCadastros.Controls.Add(this.btnSalvar);
             this.pnCadastros.Controls.Add(this.button4);
-            this.pnCadastros.Controls.Add(this.dataGridView1);
-            this.pnCadastros.Controls.Add(this.textBox1);
+            this.pnCadastros.Controls.Add(this.dgvFuncionario);
+            this.pnCadastros.Controls.Add(this.txtPesquisar);
             this.pnCadastros.Controls.Add(this.label1);
-            this.pnCadastros.Controls.Add(this.textBox2);
+            this.pnCadastros.Controls.Add(this.txtUsuario);
             this.pnCadastros.Controls.Add(this.label2);
-            this.pnCadastros.Controls.Add(this.textBox3);
+            this.pnCadastros.Controls.Add(this.txtSenha);
             this.pnCadastros.Controls.Add(this.label3);
-            this.pnCadastros.Controls.Add(this.textBox4);
+            this.pnCadastros.Controls.Add(this.txtNome);
             this.pnCadastros.Controls.Add(this.label4);
             this.pnCadastros.Controls.Add(this.label5);
             this.pnCadastros.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -78,26 +80,29 @@
             this.button1.TabIndex = 67;
             this.button1.Text = "EXCLUIR";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // btnAlterar
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(190, 263);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(103, 31);
-            this.button2.TabIndex = 66;
-            this.button2.Text = "ALTERAR";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnAlterar.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAlterar.Location = new System.Drawing.Point(190, 263);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(103, 31);
+            this.btnAlterar.TabIndex = 66;
+            this.btnAlterar.Text = "ALTERAR";
+            this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
-            // button3
+            // btnSalvar
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(306, 263);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(94, 31);
-            this.button3.TabIndex = 65;
-            this.button3.Text = "SALVAR";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnSalvar.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalvar.Location = new System.Drawing.Point(306, 263);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(94, 31);
+            this.btnSalvar.TabIndex = 65;
+            this.btnSalvar.Text = "SALVAR";
+            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // button4
             // 
@@ -108,22 +113,25 @@
             this.button4.TabIndex = 64;
             this.button4.Text = "NOVO";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // dataGridView1
+            // dgvFuncionario
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(285, 105);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(233, 107);
-            this.dataGridView1.TabIndex = 63;
+            this.dgvFuncionario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvFuncionario.Location = new System.Drawing.Point(285, 105);
+            this.dgvFuncionario.Name = "dgvFuncionario";
+            this.dgvFuncionario.Size = new System.Drawing.Size(233, 107);
+            this.dgvFuncionario.TabIndex = 63;
+            this.dgvFuncionario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFuncionario_CellContentClick);
             // 
-            // textBox1
+            // txtPesquisar
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(345, 71);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(173, 21);
-            this.textBox1.TabIndex = 62;
+            this.txtPesquisar.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPesquisar.Location = new System.Drawing.Point(345, 71);
+            this.txtPesquisar.Name = "txtPesquisar";
+            this.txtPesquisar.Size = new System.Drawing.Size(173, 21);
+            this.txtPesquisar.TabIndex = 62;
+            this.txtPesquisar.TextChanged += new System.EventHandler(this.txtPesquisar_TextChanged);
             // 
             // label1
             // 
@@ -135,13 +143,13 @@
             this.label1.TabIndex = 61;
             this.label1.Text = "Pesquisar:";
             // 
-            // textBox2
+            // txtUsuario
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(81, 105);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(166, 21);
-            this.textBox2.TabIndex = 60;
+            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuario.Location = new System.Drawing.Point(81, 105);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(166, 21);
+            this.txtUsuario.TabIndex = 60;
             // 
             // label2
             // 
@@ -153,13 +161,13 @@
             this.label2.TabIndex = 59;
             this.label2.Text = "Usuário:";
             // 
-            // textBox3
+            // txtSenha
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(81, 143);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(166, 21);
-            this.textBox3.TabIndex = 58;
+            this.txtSenha.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSenha.Location = new System.Drawing.Point(81, 143);
+            this.txtSenha.Name = "txtSenha";
+            this.txtSenha.Size = new System.Drawing.Size(166, 21);
+            this.txtSenha.TabIndex = 58;
             // 
             // label3
             // 
@@ -171,13 +179,13 @@
             this.label3.TabIndex = 57;
             this.label3.Text = "Senha:";
             // 
-            // textBox4
+            // txtNome
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(81, 72);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(166, 22);
-            this.textBox4.TabIndex = 56;
+            this.txtNome.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNome.Location = new System.Drawing.Point(81, 72);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(166, 22);
+            this.txtNome.TabIndex = 56;
             // 
             // label4
             // 
@@ -200,6 +208,16 @@
             this.label5.Text = "CADASTRO DE FUNCIONÁRIO";
             this.label5.Click += new System.EventHandler(this.label5_Click_1);
             // 
+            // txtCodFunc
+            // 
+            this.txtCodFunc.BackColor = System.Drawing.SystemColors.Control;
+            this.txtCodFunc.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCodFunc.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodFunc.Location = new System.Drawing.Point(24, 47);
+            this.txtCodFunc.Name = "txtCodFunc";
+            this.txtCodFunc.Size = new System.Drawing.Size(10, 15);
+            this.txtCodFunc.TabIndex = 68;
+            // 
             // Funcionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -211,7 +229,7 @@
             this.Load += new System.EventHandler(this.Funcionario_Load);
             this.pnCadastros.ResumeLayout(false);
             this.pnCadastros.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFuncionario)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -220,18 +238,19 @@
 
         private System.Windows.Forms.Panel pnCadastros;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnAlterar;
+        private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DataGridView dgvFuncionario;
+        private System.Windows.Forms.TextBox txtPesquisar;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtCodFunc;
     }
 }

@@ -43,3 +43,26 @@ C:\Users\barro\OneDrive\Área de Trabalho\Projeto Cidade\SystemArtEsportivos\obj
 C:\Users\barro\OneDrive\Área de Trabalho\Projeto Cidade\SystemArtEsportivos\obj\Debug\SystemAr.9B13B4F4.Up2Date
 C:\Users\barro\OneDrive\Área de Trabalho\Projeto Cidade\SystemArtEsportivos\obj\Debug\SystemArtEsportivos.exe
 C:\Users\barro\OneDrive\Área de Trabalho\Projeto Cidade\SystemArtEsportivos\obj\Debug\SystemArtEsportivos.pdb
+C:\Users\flavi\Source\Repos\SystemArtESportivos\SystemArtEsportivos\bin\Debug\Login.resx
+C:\Users\flavi\Source\Repos\SystemArtESportivos\SystemArtEsportivos\bin\Debug\Login.cs
+C:\Users\flavi\Source\Repos\SystemArtESportivos\SystemArtEsportivos\bin\Debug\Login.Designer.cs
+C:\Users\flavi\Source\Repos\SystemArtESportivos\SystemArtEsportivos\bin\Debug\SystemArtEsportivos.exe.config
+C:\Users\flavi\Source\Repos\SystemArtESportivos\SystemArtEsportivos\bin\Debug\SystemArtEsportivos.exe
+C:\Users\flavi\Source\Repos\SystemArtESportivos\SystemArtEsportivos\bin\Debug\SystemArtEsportivos.pdb
+C:\Users\flavi\Source\Repos\SystemArtESportivos\SystemArtEsportivos\bin\Debug\MySql.Data.dll
+C:\Users\flavi\Source\Repos\SystemArtESportivos\SystemArtEsportivos\bin\Debug\MySQLConnection.dll
+C:\Users\flavi\Source\Repos\SystemArtESportivos\SystemArtEsportivos\obj\Debug\SystemArtEsportivos.csproj.AssemblyReference.cache
+C:\Users\flavi\Source\Repos\SystemArtESportivos\SystemArtEsportivos\obj\Debug\SystemArtEsportivos.csproj.SuggestedBindingRedirects.cache
+C:\Users\flavi\Source\Repos\SystemArtESportivos\SystemArtEsportivos\obj\Debug\SystemArtEsportivos.Cliente.resources
+C:\Users\flavi\Source\Repos\SystemArtESportivos\SystemArtEsportivos\obj\Debug\SystemArtEsportivos.Funcionario.resources
+C:\Users\flavi\Source\Repos\SystemArtESportivos\SystemArtEsportivos\obj\Debug\SystemArtEsportivos.Pedido.resources
+C:\Users\flavi\Source\Repos\SystemArtESportivos\SystemArtEsportivos\obj\Debug\SystemArtEsportivos.Produto.resources
+C:\Users\flavi\Source\Repos\SystemArtESportivos\SystemArtEsportivos\obj\Debug\SystemArtEsportivos.Splash.resources
+C:\Users\flavi\Source\Repos\SystemArtESportivos\SystemArtEsportivos\obj\Debug\SystemArtEsportivos.Menu.resources
+C:\Users\flavi\Source\Repos\SystemArtESportivos\SystemArtEsportivos\obj\Debug\SystemArtEsportivos.Properties.Resources.resources
+C:\Users\flavi\Source\Repos\SystemArtESportivos\SystemArtEsportivos\obj\Debug\SystemArtEsportivos.csproj.GenerateResource.cache
+C:\Users\flavi\Source\Repos\SystemArtESportivos\SystemArtEsportivos\obj\Debug\SystemArtEsportivos.csproj.CoreCompileInputs.cache
+C:\Users\flavi\Source\Repos\SystemArtESportivos\SystemArtEsportivos\obj\Debug\SystemArtEsportivos.csproj.CopyComplete
+C:\Users\flavi\Source\Repos\SystemArtESportivos\SystemArtEsportivos\obj\Debug\SystemArtEsportivos.exe
+C:\Users\flavi\Source\Repos\SystemArtESportivos\SystemArtEsportivos\obj\Debug\SystemArtEsportivos.pdb
+C:\Users\flavi\Source\Repos\SystemArtESportivos\SystemArtEsportivos\obj\Debug\SystemArtEsportivos.Login.resources

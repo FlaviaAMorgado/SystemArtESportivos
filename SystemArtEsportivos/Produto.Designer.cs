@@ -29,8 +29,12 @@
         private void InitializeComponent()
         {
             this.pnCadastros = new System.Windows.Forms.Panel();
-            this.dgvFuncionario = new System.Windows.Forms.DataGridView();
-            this.txtPesquisarFunc = new System.Windows.Forms.TextBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.btnAlterar = new System.Windows.Forms.Button();
+            this.btnSalvar = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.dgvProduto = new System.Windows.Forms.DataGridView();
+            this.txtPesquisar = new System.Windows.Forms.TextBox();
             this.lblPesquisar = new System.Windows.Forms.Label();
             this.txtValorUni = new System.Windows.Forms.TextBox();
             this.lblValorUnitario = new System.Windows.Forms.Label();
@@ -38,25 +42,21 @@
             this.lblQtd = new System.Windows.Forms.Label();
             this.txtNomeProd = new System.Windows.Forms.TextBox();
             this.lblNomeProd = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtCodBarras = new System.Windows.Forms.TextBox();
             this.lblCodBarras = new System.Windows.Forms.Label();
             this.lbltitolofuncionario = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
             this.pnCadastros.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvFuncionario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProduto)).BeginInit();
             this.SuspendLayout();
             // 
             // pnCadastros
             // 
             this.pnCadastros.Controls.Add(this.button5);
-            this.pnCadastros.Controls.Add(this.button6);
-            this.pnCadastros.Controls.Add(this.button7);
+            this.pnCadastros.Controls.Add(this.btnAlterar);
+            this.pnCadastros.Controls.Add(this.btnSalvar);
             this.pnCadastros.Controls.Add(this.button8);
-            this.pnCadastros.Controls.Add(this.dgvFuncionario);
-            this.pnCadastros.Controls.Add(this.txtPesquisarFunc);
+            this.pnCadastros.Controls.Add(this.dgvProduto);
+            this.pnCadastros.Controls.Add(this.txtPesquisar);
             this.pnCadastros.Controls.Add(this.lblPesquisar);
             this.pnCadastros.Controls.Add(this.txtValorUni);
             this.pnCadastros.Controls.Add(this.lblValorUnitario);
@@ -64,7 +64,7 @@
             this.pnCadastros.Controls.Add(this.lblQtd);
             this.pnCadastros.Controls.Add(this.txtNomeProd);
             this.pnCadastros.Controls.Add(this.lblNomeProd);
-            this.pnCadastros.Controls.Add(this.textBox1);
+            this.pnCadastros.Controls.Add(this.txtCodBarras);
             this.pnCadastros.Controls.Add(this.lblCodBarras);
             this.pnCadastros.Controls.Add(this.lbltitolofuncionario);
             this.pnCadastros.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -73,21 +73,67 @@
             this.pnCadastros.Size = new System.Drawing.Size(659, 354);
             this.pnCadastros.TabIndex = 47;
             // 
-            // dgvFuncionario
+            // button5
             // 
-            this.dgvFuncionario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvFuncionario.Location = new System.Drawing.Point(306, 106);
-            this.dgvFuncionario.Name = "dgvFuncionario";
-            this.dgvFuncionario.Size = new System.Drawing.Size(223, 99);
-            this.dgvFuncionario.TabIndex = 58;
+            this.button5.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(429, 257);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(94, 31);
+            this.button5.TabIndex = 75;
+            this.button5.Text = "EXCLUIR";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // txtPesquisarFunc
+            // btnAlterar
             // 
-            this.txtPesquisarFunc.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPesquisarFunc.Location = new System.Drawing.Point(398, 71);
-            this.txtPesquisarFunc.Name = "txtPesquisarFunc";
-            this.txtPesquisarFunc.Size = new System.Drawing.Size(131, 21);
-            this.txtPesquisarFunc.TabIndex = 57;
+            this.btnAlterar.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAlterar.Location = new System.Drawing.Point(191, 257);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(103, 31);
+            this.btnAlterar.TabIndex = 74;
+            this.btnAlterar.Text = "ALTERAR";
+            this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalvar.Location = new System.Drawing.Point(312, 257);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(94, 31);
+            this.btnSalvar.TabIndex = 73;
+            this.btnSalvar.Text = "SALVAR";
+            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            // 
+            // button8
+            // 
+            this.button8.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.Location = new System.Drawing.Point(67, 257);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(94, 31);
+            this.button8.TabIndex = 72;
+            this.button8.Text = "NOVO";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // dgvProduto
+            // 
+            this.dgvProduto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProduto.Location = new System.Drawing.Point(306, 106);
+            this.dgvProduto.Name = "dgvProduto";
+            this.dgvProduto.Size = new System.Drawing.Size(223, 99);
+            this.dgvProduto.TabIndex = 58;
+            this.dgvProduto.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFuncionario_CellContentClick);
+            // 
+            // txtPesquisar
+            // 
+            this.txtPesquisar.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPesquisar.Location = new System.Drawing.Point(398, 71);
+            this.txtPesquisar.Name = "txtPesquisar";
+            this.txtPesquisar.Size = new System.Drawing.Size(131, 21);
+            this.txtPesquisar.TabIndex = 57;
+            this.txtPesquisar.TextChanged += new System.EventHandler(this.txtPesquisar_TextChanged);
             // 
             // lblPesquisar
             // 
@@ -153,13 +199,13 @@
             this.lblNomeProd.TabIndex = 50;
             this.lblNomeProd.Text = "Nome do Produto:";
             // 
-            // textBox1
+            // txtCodBarras
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(144, 69);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(138, 21);
-            this.textBox1.TabIndex = 49;
+            this.txtCodBarras.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodBarras.Location = new System.Drawing.Point(144, 69);
+            this.txtCodBarras.Name = "txtCodBarras";
+            this.txtCodBarras.Size = new System.Drawing.Size(138, 21);
+            this.txtCodBarras.TabIndex = 49;
             // 
             // lblCodBarras
             // 
@@ -181,46 +227,6 @@
             this.lbltitolofuncionario.TabIndex = 47;
             this.lbltitolofuncionario.Text = "CADASTRO DE PRODUTOS";
             // 
-            // button5
-            // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(429, 257);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(94, 31);
-            this.button5.TabIndex = 75;
-            this.button5.Text = "EXCLUIR";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(191, 257);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(103, 31);
-            this.button6.TabIndex = 74;
-            this.button6.Text = "ALTERAR";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(312, 257);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(94, 31);
-            this.button7.TabIndex = 73;
-            this.button7.Text = "SALVAR";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            this.button8.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(67, 257);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(94, 31);
-            this.button8.TabIndex = 72;
-            this.button8.Text = "NOVO";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
             // Produto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -232,7 +238,7 @@
             this.Load += new System.EventHandler(this.Produto_Load);
             this.pnCadastros.ResumeLayout(false);
             this.pnCadastros.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvFuncionario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProduto)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -240,8 +246,8 @@
         #endregion
 
         private System.Windows.Forms.Panel pnCadastros;
-        private System.Windows.Forms.DataGridView dgvFuncionario;
-        private System.Windows.Forms.TextBox txtPesquisarFunc;
+        private System.Windows.Forms.DataGridView dgvProduto;
+        private System.Windows.Forms.TextBox txtPesquisar;
         private System.Windows.Forms.Label lblPesquisar;
         private System.Windows.Forms.TextBox txtValorUni;
         private System.Windows.Forms.Label lblValorUnitario;
@@ -249,12 +255,12 @@
         private System.Windows.Forms.Label lblQtd;
         private System.Windows.Forms.TextBox txtNomeProd;
         private System.Windows.Forms.Label lblNomeProd;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtCodBarras;
         private System.Windows.Forms.Label lblCodBarras;
         private System.Windows.Forms.Label lbltitolofuncionario;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btnAlterar;
+        private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button button8;
     }
 }
